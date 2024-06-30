@@ -8,10 +8,10 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: [
-                    '/sugang',
-                    '/sugang/notice',
-                    '/sugang/register',
-                    '/sugang/desired',
+                    '/',
+                    '/notice',
+                    '/register',
+                    '/desired',
                 ],
             },
         ],
