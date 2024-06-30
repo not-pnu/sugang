@@ -15,10 +15,16 @@ export const metadata: Metadata = {
         siteName: '센디 드라이버',
         url: URL_DATA.APP_URL,
         type: 'website',
+        images: [{
+            url: URL_DATA.APP_URL + '/image/not-pnu-logo.png',
+            width: 500,
+            height: 500,
+        }]
     },
     robots: {
         index: true,
     },
+
 };
 
 export default function RootLayout({
