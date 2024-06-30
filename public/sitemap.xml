@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://not-pnu.github.io/sugang</loc>
+        <lastmod>2024-06-30T08:40:40.525Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://not-pnu.github.io/sugang/notice</loc>
+        <lastmod>2024-06-30T08:40:40.525Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://not-pnu.github.io/sugang/register</loc>
+        <lastmod>2024-06-30T08:40:40.525Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://not-pnu.github.io/sugang/desired</loc>
+        <lastmod>2024-06-30T08:40:40.525Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>1</priority>
+    </url>
+</urlset>
