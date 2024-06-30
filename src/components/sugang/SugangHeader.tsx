@@ -4,6 +4,7 @@ import Link from "next/link";
 import TitleLogo from "../TitleLogo";
 import { usePathname } from "next/navigation";
 import { SlStar } from "react-icons/sl";
+import {URL_DATA} from '@/constants/url';
 
 export default function SugangHeader() {
   const pathname = usePathname();
@@ -45,7 +46,7 @@ export default function SugangHeader() {
           </ul>
         </nav>
         <div className="ml-auto overflow-hidden w-500 relative animate-sparkling">
-          <a href={process.env.NEXT_PUBLIC_MAILBADARA_URL} target="_blank">
+          <a href={URL_DATA.APP_URL} target="_blank">
             <p className="animate-slide-infinite text-white text-nowrap font-mono flex items-center gap-x-2">
               <SlStar />
               학과 홈페이지 소식을 뉴스레터로! MailBadara 구독 ㄱㄱ!

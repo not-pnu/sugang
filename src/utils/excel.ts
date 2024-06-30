@@ -1,8 +1,9 @@
 import { ExcelSubjectType, SubjectType } from "@/types/subject";
 import axios from "axios";
 import * as XLSX from "xlsx";
+import {URL_DATA} from '@/constants/url';
 
-const DEFAULT_URL = process.env.NEXT_PUBLIC_DEFAULT_URL;
+const DEFAULT_URL = URL_DATA.DEFAULT_URL
 
 async function fetchExcelFile(url: string) {
   console.log(DEFAULT_URL);
