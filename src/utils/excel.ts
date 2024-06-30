@@ -8,7 +8,7 @@ async function fetchExcelFile(url: string) {
   console.log(DEFAULT_URL);
   try {
     const response = await axios.get(
-      "/pnu-mock-sugang/sugang-data-20240124.xlsx",
+      "/sugang/sugang-data-20240124.xlsx",
       {
         responseType: "arraybuffer",
       }
