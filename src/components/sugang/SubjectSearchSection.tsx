@@ -7,7 +7,7 @@ import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
 import { readExcelData } from "@/utils/excel";
 import { filterData } from "@/utils/filter";
 import { SubjectSearchResult } from "@/components/sugang/SubjectSearchResult";
-import { useState } from "react";
+import {useEffect, useState} from 'react';
 import useAlert from "@/stores/alert";
 import { cls } from "@/utils/util";
 
@@ -27,7 +27,7 @@ export default function SubjectSearchSection({
   return (
     <section
       className={cls(
-        "flex flex-col gap-y-4 text-nowrap duration-500 ease-in-out origin-top",
+        "flex flex-col gap-y-4 text-nowrap duration-300 ease-in-out origin-top",
         visible ? "opacity-100 max-h-screen" : "opacity-0 max-h-0"
       )}
     >
@@ -125,7 +125,7 @@ function SubjectFilterMenu() {
         <tr className="h-40">
           <SubjectLabel label="검색방법" />
           <td
-            className="px-12 items-start flex-col sm:flex-row flex gap-x-16 sm:items-center min-h-40"
+            className="px-12 md:items-start md:flex-col flex gap-x-16 items-center min-h-40"
             colSpan={3}
           >
             <div

@@ -46,7 +46,7 @@ export default function NoticeSection1() {
                 <td
                   className={[
                     openIndexList[index] ? "border-[1px]" : "",
-                    " transition-all duration-500 ease-in-out",
+                    " transition-all duration-300 ease-in-out",
                   ].join(" ")}
                 >
                   <div

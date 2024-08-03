@@ -43,7 +43,7 @@ export default function DesiredSubjectSection({
   return (
     <section
       className={cls(
-        "flex flex-col gap-y-4 relative duration-500 ease-in-out origin-top",
+        "flex flex-col gap-y-4 relative duration-300 ease-in-out origin-top",
         visible ? "opacity-100 max-h-screen" : "opacity-0 max-h-0"
       )}
     >

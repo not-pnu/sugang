@@ -6,7 +6,7 @@ import useLoading from "@/stores/loading";
 import { readExcelData } from "@/utils/excel";
 import { generateRandomDelay } from "@/utils/util";
 import { usePathname } from "next/navigation";
-import { useRef } from "react";
+import {useEffect, useRef} from 'react';
 
 export default function SugangSearchBar() {
   const pathname = usePathname();
@@ -14,7 +14,11 @@ export default function SugangSearchBar() {
   const { setIsLoading } = useLoading();
   const courseCodeRef = useRef<HTMLInputElement>(null);
   const courseRoomIdRef = useRef<HTMLInputElement>(null);
-  const { setMessage } = useAlert();
+  const { setMessage, reset } = useAlert();
+
+    useEffect(() => {
+        reset();
+    }, []);
 
   const onSubmitInput = async () => {
     const data = await readExcelData("/sugang-data-20240124.xlsx");
