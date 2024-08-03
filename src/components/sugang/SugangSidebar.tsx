@@ -1,10 +1,12 @@
 import { BiNotepad } from "react-icons/bi";
 import { FaCalendarCheck } from "react-icons/fa";
+import {cls} from '@/utils/util';
 
 export default function SugangSidebar() {
   return (
     <>
-      <aside className="min-w-210 max-w-210 hidden sm:flex flex-col fixed h-screen ">
+      <aside id='sugang-sidebar' className={cls('min-w-210 max-w-210 flex flex-col fixed h-screen z-[10000]',
+          'md:hidden')}>
         <ProfileBlock />
         <div className="flex flex-col gap-y-4 h-fit p-16 bg-slate-100 border-b border-2">
           <ScheduleBlock />
@@ -14,7 +16,7 @@ export default function SugangSidebar() {
           광고 영역
         </div>
       </aside>
-      <div className="min-w-210 h-screen hidden sm:block" />
+      <div className="min-w-210 h-screen md:hidden" />
     </>
   );
 }

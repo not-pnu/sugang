@@ -50,8 +50,8 @@ export default function NoticeSection1() {
                   ].join(" ")}
                 >
                   <div
-                    className={`overflow-hidden px-60 transition-all duration-500 ease-in-out ${
-                      openIndexList[index] ? "h-100" : "h-0"
+                    className={`overflow-hidden px-60 md:px-24 transition-all duration-300 ease-in-out ${
+                      openIndexList[index] ? "max-h-240 pb-20" : "max-h-0 pb-0"
                     }`}
                   >
                     <div className="list-disc mt-16">

@@ -33,6 +33,7 @@ const config: Config = {
             padding: generateCSSObject('padding'),
             margin: generateCSSObject('margin'),
             borderRadius: generateCSSObject('borderRadius'),
+            zIndex: generateCSSObject('zIndex'),
             keyframes: {
                 slide: {
                     '0%': {transform: 'translateX(100%)'},

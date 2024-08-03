@@ -44,34 +44,34 @@ export default function SugangSearchBar() {
   };
 
   return (
-    <form className="flex flex-col sm:flex-row border w-full items-center">
-      <div className="flex">
-        <label className="text-pnuText m-8 w-100 flex justify-center items-center text-nowrap">
+    <form className="flex md:flex-col border w-full items-center">
+      <div className="flex md:w-full">
+        <label className="text-pnuText m-8 w-100 flex justify-center items-center text-nowrap md:justify-end">
           교과목번호
         </label>
-        <div className="border p-4 flex justify-center">
+        <div className="border p-4 flex justify-center md:w-full">
           <input
             ref={courseCodeRef}
             type="text"
-            className="border focus:outline-none"
+            className="border focus:outline-none md:w-full"
           />
         </div>
       </div>
-      <div className="flex">
-        <label className="text-pnuText m-8 w-100 flex justify-center items-center text-nowrap">
+      <div className="flex md:w-full">
+        <label className="text-pnuText m-8 w-100 flex justify-center items-center text-nowrap md:justify-end">
           분반
         </label>
-        <div className="border p-4 flex justify-center">
+        <div className="border p-4 flex justify-center md:w-full">
           <input
             ref={courseRoomIdRef}
             type="text"
-            className="border focus:outline-none"
+            className="border focus:outline-none md:w-full"
           />
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center md:w-full">
         <button
-          className="bg-pnuWarn text-white text-sm m-6 px-8 py-4 rounded-md text-nowrap"
+          className="bg-pnuWarn text-white text-sm m-6 px-8 py-4 rounded-md text-nowrap md:w-full md:py-8"
           onClick={onSubmitInput}
         >
           {pathname === "/register" ? "빠른 수강신청" : "빠른 담기"}
