@@ -2,6 +2,8 @@ import HomeHeader from "@/components/HomeHeader";
 import HomeInput from "@/components/home/HomeInput";
 import Link from "next/link";
 import {cls} from '@/utils/util';
+import LoginBtn from '@/components/LoginBtn';
+
 
 export default function Home() {
   return (
@@ -27,9 +29,7 @@ export default function Home() {
             {/*  <div className="flex text-pnuText">국문 / 영어</div>*/}
             {/*</div>*/}
           </div>
-          <Link href="/notice" className="bg-pnuBlue text-white px-48 h-90 rounded md:px-16 md:h-60 md:w-full md:mt-24 flex justify-center items-center">
-              로그인
-          </Link>
+        <LoginBtn />
         </form>
       </main>
     </>
