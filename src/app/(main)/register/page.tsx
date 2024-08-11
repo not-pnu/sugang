@@ -1,6 +1,9 @@
 import SubjectApplyDetails from "@/components/sugang/SubjectApplyDetails";
 import SugangNavbarMenu from "@/components/sugang/SugangNavbarMenu";
 import SugangSearchBar from "@/components/sugang/SugangSearchBar";
+import {generateMetadata} from '@/utils/next';
+
+export const metadata = generateMetadata('수강신청')
 
 export default function RegisterPage() {
   return (

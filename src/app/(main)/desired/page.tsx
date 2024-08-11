@@ -1,6 +1,9 @@
 import DesiredRegisterSection from "@/components/desired/DesiredRegisterSection";
 import SubjectApplyDetails from "@/components/sugang/SubjectApplyDetails";
 import SugangSearchBar from "@/components/sugang/SugangSearchBar";
+import {generateMetadata} from '@/utils/next';
+
+export const metadata = generateMetadata('희망과목담기')
 
 export default function DesiredPage() {
   return (
