@@ -7,6 +7,7 @@ import useLocalStorage from "@/hooks/useLocalStorage";
 import useLoading from "@/stores/loading";
 import useAlert from "@/stores/alert";
 import { TCell, THead } from "../Table";
+import { sendGAEvent } from '@next/third-parties/google'
 
 export function SubjectSearchResult() {
   const pathname = usePathname();
@@ -16,6 +17,10 @@ export function SubjectSearchResult() {
   const { setMessage } = useAlert();
 
   const onSaveSubject = (subject: SubjectType) => {
+    sendGAEvent({
+      event: 'buttonClicked',
+      value: pathname === "/register" ? 'register-subject' : 'register-desired-subject',
+    });
     setIsLoading(true);
     setTimeout(() => {
       setValue([...storedValue, subject]);

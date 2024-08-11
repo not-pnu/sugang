@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <HomeHeader />
-      <main className="flex min-h-screen flex-col p-16 items-center gap-y-20">
+      <main className="flex min-h-screen flex-col p-16 items-center gap-y-20 scroll-hidden">
         <h2 className="text-3xl font-bold text-pnuText mt-32 text-center">
           2024학년도 <br className='hidden md:block' />1학기 수강신청
         </h2>

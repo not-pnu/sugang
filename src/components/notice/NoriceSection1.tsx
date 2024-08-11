@@ -5,6 +5,7 @@ import useLoading from "@/stores/loading";
 import { generateRandomDelay } from "@/utils/util";
 import { useRouter } from "next/navigation";
 import { Fragment, useState } from "react";
+import { sendGAEvent } from '@next/third-parties/google'
 
 export default function NoticeSection1() {
   const router = useRouter();
@@ -22,6 +23,10 @@ export default function NoticeSection1() {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    sendGAEvent({
+      event: 'buttonClicked',
+        value: 'click-register-button',
+    });
     setTimeout(() => {
       setIsLoading(false);
       router.push("/register");

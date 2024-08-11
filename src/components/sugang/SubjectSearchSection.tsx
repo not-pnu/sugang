@@ -7,9 +7,11 @@ import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
 import { readExcelData } from "@/utils/excel";
 import { filterData } from "@/utils/filter";
 import { SubjectSearchResult } from "@/components/sugang/SubjectSearchResult";
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import useAlert from "@/stores/alert";
 import { cls } from "@/utils/util";
+import { sendGAEvent } from '@next/third-parties/google'
+
 
 export default function SubjectSearchSection({
   visible,
@@ -20,6 +22,10 @@ export default function SubjectSearchSection({
   const { type, data } = useAlert();
 
   const onClickQuery = async () => {
+      sendGAEvent({
+        event: 'buttonClicked',
+        value: 'click-search-button',
+      });
     const data = await readExcelData("/sugang-data-20240124.xlsx");
     setSubjectValues(filterData(data, filter));
   };

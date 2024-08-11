@@ -7,6 +7,8 @@ import { readExcelData } from "@/utils/excel";
 import { generateRandomDelay } from "@/utils/util";
 import { usePathname } from "next/navigation";
 import {useEffect, useRef} from 'react';
+import { sendGAEvent } from '@next/third-parties/google'
+
 
 export default function SugangSearchBar() {
   const pathname = usePathname();
@@ -21,6 +23,10 @@ export default function SugangSearchBar() {
     }, []);
 
   const onSubmitInput = async () => {
+    sendGAEvent({
+      event: 'buttonClicked',
+      value: 'click-guick-register-button',
+    });
     const data = await readExcelData("/sugang-data-20240124.xlsx");
     const courseCode = courseCodeRef.current?.value;
     const courseRoomId = courseRoomIdRef.current?.value;
