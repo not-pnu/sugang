@@ -1,6 +1,6 @@
 import { ExcelSubjectType, SubjectType } from "@/types/subject";
 import axios from "axios";
-import * as XLSX from "xlsx";
+import {read, utils} from "xlsx";
 import {URL_DATA} from '@/constants/url';
 
 const DEFAULT_URL = URL_DATA.DEFAULT_URL
@@ -16,7 +16,7 @@ async function fetchExcelFile(url: string) {
     );
 
     const data = new Uint8Array(response.data);
-    const workbook = XLSX.read(data, { type: "array" });
+    const workbook = read(data, { type: "array" });
 
     return workbook;
   } catch (error) {
@@ -34,7 +34,7 @@ export async function readExcelData(
   const firstSheetName = workbook.SheetNames[0];
   const worksheet = workbook.Sheets[firstSheetName];
 
-  const data = XLSX.utils.sheet_to_json(worksheet) as ExcelSubjectType[];
+  const data = utils.sheet_to_json(worksheet) as ExcelSubjectType[];
   return transformData(data.slice(1));
 }
 
